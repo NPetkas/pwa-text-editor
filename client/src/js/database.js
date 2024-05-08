@@ -13,20 +13,21 @@ const initdb = async () =>
   });
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
-export const putDb = async (content) => {console.error('putDb not implemented');
-  const jate = await openDB('jate', 1);
-  const action = jate.transaction('jate', 'readwrite');
-  const store = action.objectStore('jate');
+export const putDb = async (content) => { 
+  console.error('putDb not implemented');
+  const contact = await openDB('jate', 1);
+  const tans = contact.transaction('jate', 'readwrite');
+  const store = tans.objectStore('jate');
   const request = store.put({ id: 1, value: content});
   const result = await request; 
   console.log('Data saved to the database', result);
-  return result;
 }
+
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => {console.error('getDb not implemented');
-  const jate = await openDB('jate', 1);
-  const action = jate.transaction('jate', 'readonly');
-  const store = action.objectStore('jate');
+export const getDb = async () => { console.error('getDb not implemented');
+  const contact = await openDB('jate', 1);
+  const tans = contact.transaction('jate', 'readonly');
+  const store = tans.objectStore('jate');
   const request = store.getAll();
   const result = await request;
   console.log('result.value', result);

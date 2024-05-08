@@ -36,7 +36,7 @@
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./",
-  "description": "My simple text editor!",
+  "description": "My simple Text Editor!",
   "background_color": "#0d468c",
   "theme_color": "#0d468c"
 }

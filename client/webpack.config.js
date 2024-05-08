@@ -32,7 +32,7 @@ module.exports = () => {
         inject: true,
         name: 'Text Editor',
         short_name: 'Editor',
-        description: 'My simple text editor!',
+        description: 'My simple Text Editor!',
         background_color: '#0d468c',
         theme_color: '#0d468c',
         start_url: './',
@@ -44,8 +44,7 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           },
         ],
-      })
-      
+      }),
     ],
 
     module: {
@@ -57,6 +56,7 @@ module.exports = () => {
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
+         
           use: {
             loader: 'babel-loader',
             options: {

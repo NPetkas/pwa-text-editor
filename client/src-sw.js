@@ -36,7 +36,7 @@ const assetCache = new CacheFirst({
     new ExpirationPlugin({
       maxAgeSeconds: 30 * 24 * 60 * 60,
     }),
-  ],
-});
-registerRoute(({request}) => 
-request.destination === 'style' || request.destination === 'script', assetCache);
+  ]
+})
+
+registerRoute(({ request }) => request.destination === 'style' || request.destination === 'script', assetCache);
