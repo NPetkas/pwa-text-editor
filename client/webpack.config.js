@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text Editor',
+        title: 'Text editor',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -64,7 +64,8 @@ module.exports = () => {
               plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
-        }
+        },
+        
       ],
     },
   };
